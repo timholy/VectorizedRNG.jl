@@ -123,4 +123,15 @@ function __init__()
   __init()
 end
 
+using PrecompileTools
+
+# @setup_workload begin
+#     __init()
+#     lrng = local_rng()
+#     x64 = Vector{Float64}(undef, 255)
+#     @compile_workload begin
+#         rand!(lrng, x64)
+#     end
+# end
+
 end # module
